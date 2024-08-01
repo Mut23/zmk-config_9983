@@ -13,9 +13,9 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 
-#define DEFAULT 0
+#define DEFAULT 2
 #define SYM 1
-#define UPPER 2
+#define UPPER 0
 
 &sk {
        release-after-ms = <2500>;
