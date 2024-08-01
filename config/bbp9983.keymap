@@ -13,9 +13,9 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 
-#define DEFAULT 2
+#define DEFAULT 0
 #define SYM 1
-#define UPPER 0
+#define UPPER 2
 
 &sk {
        release-after-ms = <2500>;
@@ -167,7 +167,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        upper_layer {
 
             bindings = <
 // -----------------------------------------------------------------------------------------------------------------------------------------------         
@@ -184,7 +184,7 @@
     &bhm HASH Q    &bhm N1 W    &bhm N2 E    &bhm N3 R    &bhm LEFT T         &bhm RIGHT Y     &bhm UNDER U      &bhm MINUS I    &bhm PLUS O    &bhm AT P
     &bhm STAR A    &bhm N4 S    &bhm N5 D    &bhm N6 F    &bhm KP_DIVIDE G    &bhm COLON H     &bhm SEMI J       &bhm DQT K      &bhm APOS L    &kp BSPC
     &sk LSHFT      &bhm N7 Z    &bhm N8 X    &bhm N9 C    &bhm QMARK V        &bhm EXCL B      &bhm COMMA N      &bhm DOT M      &tdrshift      &kp ENTER
-                 &sk LCTRL        &kp N0                   &kp SPACE                     &sl 1             &tdtoupper
+                 &sk LCTRL        &kp N0                   &kp SPACE                     &sl 1             &tdtodefault
             >;
         };
 
@@ -201,7 +201,7 @@
             >;
         };
 
-        upper_layer {
+        default_layer {
 
             bindings = <
         &mkp LCLK                                                                                                 &btswitch
@@ -209,7 +209,7 @@
     &tdclosewindow     &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(Y)              &none                &kp C_VOL_DN      &kp C_VOL_UP     &td2
     &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LA(ESC)    &kp LC(HOME)           &kp LC(END)          &none             &none            &mt DEL BSPC
     &kp ESC            &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &rcm LA(LEFT) RCLK     &rcm LA(LEFT) RCLK   &kp LG(D)         &td1             &kp ENTER
-                  &msc SCRL_UP          &msc SCRL_DOWN            &mkp LCLK                       &kp CLCK               &tdtodefault
+                  &msc SCRL_UP          &msc SCRL_DOWN            &mkp LCLK                       &kp CLCK               &tdtoupper
             >;
         };
     };
