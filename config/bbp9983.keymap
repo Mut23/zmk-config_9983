@@ -167,7 +167,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        upper_layer {
+        default_layer {
 
             bindings = <
 // -----------------------------------------------------------------------------------------------------------------------------------------------         
@@ -179,12 +179,12 @@
 //        |         aA     |         0           |           SPACE              |         SYM         |        aA          |       
 // -----------------------------------------------------------------------------------------------------------------------------------------------
 
-                 &mkp LCLK                                                                                              &btswitch
-         &msc SCRL_UP                  &msc SCRL_DOWN           &mkp LCLK                   &mkp RCLK                          &shiftapp
-    &bhm HASH Q    &bhm N1 W    &bhm N2 E    &bhm N3 R    &bhm LEFT T         &bhm RIGHT Y     &bhm UNDER U      &bhm MINUS I    &bhm PLUS O    &bhm AT P
-    &bhm STAR A    &bhm N4 S    &bhm N5 D    &bhm N6 F    &bhm KP_DIVIDE G    &bhm COLON H     &bhm SEMI J       &bhm DQT K      &bhm APOS L    &kp BSPC
-    &sk LSHFT      &bhm N7 Z    &bhm N8 X    &bhm N9 C    &bhm QMARK V        &bhm EXCL B      &bhm COMMA N      &bhm DOT M      &tdrshift      &kp ENTER
-                 &sk LCTRL        &kp N0                   &kp SPACE                     &sl 1             &tdtodefault
+        &mkp LCLK                                                                                                 &btswitch
+        &msc SCRL_UP                   &msc SCRL_DOWN             &mkp LCLK              &rcm LA(LEFT) RCLK                            &shiftapp
+    &tdclosewindow     &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(Y)              &none                &kp C_VOL_DN      &kp C_VOL_UP     &td2
+    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LA(ESC)    &kp LC(HOME)           &kp LC(END)          &none             &none            &mt DEL BSPC
+    &kp ESC            &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &rcm LA(LEFT) RCLK     &rcm LA(LEFT) RCLK   &kp LG(D)         &td1             &kp ENTER
+                  &msc SCRL_UP          &msc SCRL_DOWN            &mkp LCLK                       &kp CLCK             &tdtouppertdtodefault
             >;
         };
 
@@ -201,15 +201,15 @@
             >;
         };
 
-        default_layer {
+        upper_layer {
 
             bindings = <
-        &mkp LCLK                                                                                                 &btswitch
-        &msc SCRL_UP                   &msc SCRL_DOWN             &mkp LCLK              &rcm LA(LEFT) RCLK                            &shiftapp
-    &tdclosewindow     &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(Y)              &none                &kp C_VOL_DN      &kp C_VOL_UP     &td2
-    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LA(ESC)    &kp LC(HOME)           &kp LC(END)          &none             &none            &mt DEL BSPC
-    &kp ESC            &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &rcm LA(LEFT) RCLK     &rcm LA(LEFT) RCLK   &kp LG(D)         &td1             &kp ENTER
-                  &msc SCRL_UP          &msc SCRL_DOWN            &mkp LCLK                       &kp CLCK               &tdtoupper
+                 &mkp LCLK                                                                                              &btswitch
+         &msc SCRL_UP                  &msc SCRL_DOWN           &mkp LCLK                   &mkp RCLK                          &shiftapp
+    &bhm HASH Q    &bhm N1 W    &bhm N2 E    &bhm N3 R    &bhm LEFT T         &bhm RIGHT Y     &bhm UNDER U      &bhm MINUS I    &bhm PLUS O    &bhm AT P
+    &bhm STAR A    &bhm N4 S    &bhm N5 D    &bhm N6 F    &bhm KP_DIVIDE G    &bhm COLON H     &bhm SEMI J       &bhm DQT K      &bhm APOS L    &kp BSPC
+    &sk LSHFT      &bhm N7 Z    &bhm N8 X    &bhm N9 C    &bhm QMARK V        &bhm EXCL B      &bhm COMMA N      &bhm DOT M      &tdrshift      &kp ENTER
+                 &sk LCTRL        &kp N0                   &kp SPACE                     &sl 1             &tdtodefault
             >;
         };
     };
