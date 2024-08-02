@@ -191,7 +191,7 @@
         &mkp LCLK                                                                                                 &btswitch
         &msc SCRL_UP                   &msc SCRL_DOWN             &mkp LCLK              &rcm LA(LEFT) RCLK                            &shiftapp
     &tdclosewindow     &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(Y)              &none                &kp C_VOL_DN      &kp C_VOL_UP     &td2
-    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LA(ESC)    &kp LC(HOME)           &kp LC(END)          &none             &none            &mt DEL BSPC
+    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LA(ESC)    &kp LC(HOME)           &kp LC(END)          &none             &none            &bhm DEL BSPC
     &kp ESC            &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &rcm LA(LEFT) RCLK     &rcm LA(LEFT) RCLK   &kp LG(D)         &td1             &kp ENTER
                   &msc SCRL_UP          &msc SCRL_DOWN            &mkp LCLK                       &kp CLCK             &tdtoupper
             >;
@@ -214,9 +214,9 @@
             bindings = <        
         &none                                                                                                    &none
        &none                       &none                &none            &none                              &none 
-    &kp HASH       &kp N1           &bhm UP N2        &kp N3           &kp LPAR               &kp RPAR           &kp UNDER     &kp MINUS      &kp PLUS           &mt PRCNT AT
-    &kp STAR       &bhm LEFT N4     &bhm DOWN N5      &bhm RIGHT N6    &mt BSLH KP_DIVIDE     &kp COLON          &kp SEMI      &kp DQT        &kp APOS           &kp BSPC
-    &none          &kp N7           &kp N8            &kp N9           &kp QMARK              &kp EXCL           &kp COMMA     &kp DOT        &mt C_MUTE DLLR    &kp ENTER
+    &kp HASH       &kp N1           &bhm UP N2        &kp N3           &kp LPAR               &kp RPAR           &kp UNDER     &kp MINUS      &kp PLUS           &bhm PRCNT AT
+    &kp STAR       &bhm LEFT N4     &bhm DOWN N5      &bhm RIGHT N6    &bhm BSLH KP_DIVIDE    &kp COLON          &kp SEMI      &kp DQT        &kp APOS           &kp BSPC
+    &none          &kp N7           &kp N8            &kp N9           &kp QMARK              &kp EXCL           &kp COMMA     &kp DOT        &bhm C_MUTE DLLR   &kp ENTER
            &none          &kp N0                    &none                     &tdtoupper               &none
             >;
         };
