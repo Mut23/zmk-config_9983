@@ -217,7 +217,7 @@
     &kp HASH       &kp N1           &bhm UP N2        &kp N3           &kp LPAR               &kp RPAR           &kp UNDER     &kp MINUS      &kp PLUS           &mt PRCNT AT
     &kp STAR       &bhm LEFT N4     &bhm DOWN N5      &bhm RIGHT N6    &mt BSLH KP_DIVIDE     &kp COLON          &kp SEMI      &kp DQT        &kp APOS           &kp BSPC
     &none          &kp N7           &kp N8            &kp N9           &kp QMARK              &kp EXCL           &kp COMMA     &kp DOT        &mt C_MUTE DLLR    &kp ENTER
-           &none          &kp N0                    &none                     &none               &none
+           &none          &kp N0                    &none                     &tdtoupper               &none
             >;
         };
 
