@@ -164,6 +164,16 @@
         };
     };
 
+   //双击键盘软重启
+    behaviors {
+        td3: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&sl>, <&to>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -196,7 +206,7 @@
     &kp Q          &bhm N1 W    &bhm N2 E    &bhm N3 R    &kp T      &kp Y      &kp U       &kp I      &kp O        &kp P
     &kp A          &bhm N4 S    &bhm N5 D    &bhm N6 F    &kp G      &kp H      &kp J       &kp K      &kp L        &kp BSPC
     &sk LSHFT      &bhm N7 Z    &bhm N8 X    &bhm N9 C    &kp V      &kp B      &kp N       &kp M      &tdrshift    &kp ENTER
-                 &sk LCTRL        &kp N0                   &kp SPACE                     &sl SYM             &tdtodefault
+                 &sk LCTRL        &kp N0                   &kp SPACE                     &td3 SYM SYM             &tdtodefault
             >;
         };
 
@@ -208,7 +218,7 @@
     &kp HASH       &kp N1           &bhm UP N2        &kp N3           &kp LPAR               &kp RPAR           &kp UNDER     &kp MINUS      &kp PLUS           &mt PRCNT AT
     &kp STAR       &bhm LEFT N4     &bhm DOWN N5      &bhm RIGHT N6    &mt BSLH KP_DIVIDE     &kp COLON          &kp SEMI      &kp DQT        &kp APOS           &kp BSPC
     &none          &kp N7           &kp N8            &kp N9           &kp QMARK              &kp EXCL           &kp COMMA     &kp DOT        &mt C_MUTE DLLR    &kp ENTER
-           &none          &kp N0                    &none                     &kp CLCK               &none
+           &none          &kp N0                    &none                     &none               &none
             >;
         };
 
