@@ -120,7 +120,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings =<&kp Q>, <&kp LA(F4)>;
+            bindings =<&kp P>, <&kp LA(F4)>;
         };
     };
 
@@ -149,7 +149,7 @@
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&pwd>, <&sys_reset>;
         };
     };
@@ -181,8 +181,8 @@
 
         &mkp LCLK                                                                                                 &btswitch
         &msc SCRL_UP                   &msc SCRL_DOWN             &mkp LCLK              &rcm LA(LEFT) RCLK                            &shiftapp
-    &kp LC(Q)          &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(Y)              &none                &bhm C_MUTE C_VOL_DN      &kp C_VOL_UP     &tdclosewindow
-    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LA(ESC)    &kp LC(HOME)           &kp LC(END)          &none                     &none            &bhm DEL BSPC
+    &kp LC(Q)          &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(Y)              &kp U                &bhm C_MUTE C_VOL_DN      &kp C_VOL_UP     &tdclosewindow
+    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LA(ESC)    &kp LC(HOME)           &kp LC(END)          &kp K                     &kp L            &bhm DEL BSPC
     &kp ESC            &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &rcm LA(LEFT) RCLK     &rcm LA(LEFT) RCLK   &kp LG(D)                 &td1             &kp ENTER
                   &msc SCRL_UP          &msc SCRL_DOWN            &mkp LCLK                       &kp CLCK             &tdtoupper
             >;
