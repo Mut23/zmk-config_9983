@@ -144,13 +144,13 @@
         };
     };
 
-   //单击输入解锁密码，双击软重启
+   //快速双击软重启
     behaviors {
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&pwd>, <&sys_reset>;
+            bindings = <&none>, <&sys_reset>;
         };
     };
 
@@ -183,8 +183,8 @@
         &msc SCRL_UP                   &msc SCRL_DOWN             &mkp LCLK              &rcm LA(LEFT) RCLK                            &shiftapp
     &kp LC(Q)          &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(Y)              &kp U                &bhm C_MUTE C_VOL_DN      &kp C_VOL_UP     &tdclosewindow
     &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LA(ESC)    &kp LC(HOME)           &kp LC(END)          &kp K                     &kp L            &bhm DEL BSPC
-    &kp ESC            &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &rcm LA(LEFT) RCLK     &rcm LA(LEFT) RCLK   &kp LG(D)                 &td1             &kp ENTER
-                  &msc SCRL_UP          &msc SCRL_DOWN            &mkp LCLK                       &kp CLCK             &tdtoupper
+    &td1               &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &msc SCRL_UP           &msc SCRL_DOWN       &kp LG(D)                 &pwd             &kp ENTER
+                  &kp ESC         &rcm LA(LEFT) RCLK            &mkp LCLK                       &kp CLCK             &tdtoupper
             >;
         };
 
