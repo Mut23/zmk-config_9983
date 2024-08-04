@@ -144,26 +144,17 @@
         };
     };
 
-   //单击输入解锁密码，双击进入bootloder
+   //单击输入解锁密码，双击软重启
     behaviors {
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&pwd>, <&bootloader>;
+            tapping-term-ms = <150>;
+            bindings = <&pwd>, <&sys_reset>;
         };
     };
 
-   //双击键盘软重启
-    behaviors {
-        td2: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <400>;
-            bindings = <&none>, <&sys_reset>;
-        };
-    };
-
+    //单击临时sym层，双击进入sym层
     behaviors {
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
@@ -190,7 +181,7 @@
 
         &mkp LCLK                                                                                                 &btswitch
         &msc SCRL_UP                   &msc SCRL_DOWN             &mkp LCLK              &rcm LA(LEFT) RCLK                            &shiftapp
-    &tdclosewindow     &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(Y)              &none                &bhm C_MUTE C_VOL_DN      &kp C_VOL_UP     &td2
+    &kp LC(Q)          &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(Y)              &none                &bhm C_MUTE C_VOL_DN      &kp C_VOL_UP     &tdclosewindow
     &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LA(ESC)    &kp LC(HOME)           &kp LC(END)          &none                     &none            &bhm DEL BSPC
     &kp ESC            &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &rcm LA(LEFT) RCLK     &rcm LA(LEFT) RCLK   &kp LG(D)                 &td1             &kp ENTER
                   &msc SCRL_UP          &msc SCRL_DOWN            &mkp LCLK                       &kp CLCK             &tdtoupper
