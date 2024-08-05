@@ -124,6 +124,25 @@
         };
     };
 
+   //双击回到桌面
+    behaviors {
+        tdgohome: tap_dance_gohome {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings =<&kp G>, <&kp LA(ESC)>;
+        };
+    };
+
+    behaviors {
+        tdtodesktop: tap_dance_todesktop {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings =<&kp M>, <&kp LG(D)>;
+        };
+    };
+
    //双击关闭浏览器标签页
     behaviors {
         tdclosetab: tap_dance_closetab { 
@@ -182,8 +201,8 @@
         &mkp LCLK                                                                                                 &btswitch
         &msc SCRL_UP                   &msc SCRL_DOWN             &mkp LCLK              &rcm LA(LEFT) RCLK                            &shiftapp
     &kp LC(Q)          &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(HOME)           &kp LC(END)          &bhm C_MUTE C_VOL_DN      &kp C_VOL_UP             &tdclosewindow
-    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LA(ESC)    &msc SCRL_UP           &msc SCRL_UP         &rcm LA(LEFT) RCLK        &rcm LA(LEFT) RCLK       &bhm DEL BSPC
-    &td1               &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &msc SCRL_DOWN         &msc SCRL_DOWN       &kp LG(D)                 &pwd                     &kp ENTER
+    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &tdgohome      &msc SCRL_UP           &msc SCRL_UP         &rcm LA(LEFT) RCLK        &rcm LA(LEFT) RCLK       &bhm DEL BSPC
+    &td1               &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &msc SCRL_DOWN         &msc SCRL_DOWN       &tdtodesktop              &pwd                     &kp ENTER
                   &kp ESC         &kp ESC                         &mkp LCLK                       &kp CLCK             &tdtoupper
             >;
         };
