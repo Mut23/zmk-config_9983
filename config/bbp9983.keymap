@@ -200,10 +200,10 @@
 
         &mkp LCLK                                                                                                 &btswitch
         &msc SCRL_UP                   &msc SCRL_DOWN             &mkp LCLK              &rcm LA(LEFT) RCLK                            &shiftapp
-    &kp LC(Q)          &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(HOME)           &kp LC(END)          &bhm C_MUTE C_VOL_DN      &kp C_VOL_UP             &tdclosewindow
-    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &tdgohome      &msc SCRL_UP           &msc SCRL_UP         &rcm LA(LEFT) RCLK        &rcm LA(LEFT) RCLK       &bhm DEL BSPC
-    &td1               &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &msc SCRL_DOWN         &msc SCRL_DOWN       &tdtodesktop              &pwd                     &kp ENTER
-                  &kp ESC         &kp ESC                         &mkp LCLK                       &kp CLCK             &tdtoupper
+    &kp LC(Q)          &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &msc SCRL_UP           &msc SCRL_UP         &bhm C_MUTE C_VOL_DN      &kp C_VOL_UP       &tdclosewindow
+    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &tdgohome      &msc SCRL_UP           &msc SCRL_UP         &none                     &none              &bhm DEL BSPC
+    &td1               &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &msc SCRL_DOWN         &msc SCRL_DOWN       &tdtodesktop              &pwd               &kp ENTER
+                  &kp ESC         &rcm LA(LEFT) RCLK                 &mkp LCLK                       &kp CLCK             &tdtoupper
             >;
         };
 
@@ -211,7 +211,7 @@
 
             bindings = <
                  &mkp LCLK                                                                                              &btswitch
-         &msc SCRL_UP                  &msc SCRL_DOWN           &mkp LCLK                   &mkp RCLK                          &shiftapp
+         &msc SCRL_UP                  &msc SCRL_DOWN           &mkp LCLK                   &rcm LA(LEFT) RCLK                          &shiftapp
     &kp Q          &bhm N1 W    &bhm N2 E    &bhm N3 R    &kp T      &kp Y      &kp U       &kp I      &kp O        &kp P
     &kp A          &bhm N4 S    &bhm N5 D    &bhm N6 F    &kp G      &kp H      &kp J       &kp K      &kp L        &kp BSPC
     &sk LSHFT      &bhm N7 Z    &bhm N8 X    &bhm N9 C    &kp V      &kp B      &kp N       &kp M      &tdrshift    &kp ENTER
