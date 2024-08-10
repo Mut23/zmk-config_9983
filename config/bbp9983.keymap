@@ -163,6 +163,15 @@
             bindings = <&none>, <&sys_reset>;
         };
     };
+ 
+    behaviors {
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp LCLK>, <&mkp RCLK>;
+        };
+    };
 
     //单击临时sym层，双击进入sym层
     behaviors {
@@ -194,7 +203,7 @@
     &kp LC(Q)          &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(HOME)           &kp LC(END)          &bhm C_MUTE C_VOL_DN      &kp C_VOL_UP       &tdclosewindow
     &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &tdgohome      &msc SCRL_UP           &msc SCRL_UP         &msc SCRL_DOWN            &msc SCRL_DOWN     &bhm DEL BSPC
     &pwd               &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &msc SCRL_UP           &msc SCRL_UP         &msc SCRL_DOWN            &msc SCRL_DOWN     &kp ENTER
-                  &kp ESC         &rcm LA(LEFT) RCLK                 &mkp LCLK                       &kp CLCK             &tdtoupper
+                  &kp ESC         &rcm LA(LEFT) RCLK                 &td2                       &kp CLCK             &tdtoupper
             >;
         };
 
