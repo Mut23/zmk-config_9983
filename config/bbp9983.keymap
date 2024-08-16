@@ -179,10 +179,10 @@
    combos {
         compatible = "zmk,combos";
         combo_shiftapp {
-            timeout-ms = <800>;
-            slow-release;
+            //timeout-ms = <800>;
+            //slow-release;
             key-positions = <6>;
-            bindings = <&kp LA(TAB) &kp LA(TAB) &kp LEFT>;
+            bindings = <&kp LA(TAB) &kp LEFT>;
         };
     };
 
