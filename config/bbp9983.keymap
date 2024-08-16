@@ -182,7 +182,7 @@
             timeout-ms = <800>;
             slow-release;
             key-positions = <6>;
-            bindings = <&kp LA(TAB)>;
+            bindings = <&kp LA(TAB) &kp LEFT>;
         };
     };
 
