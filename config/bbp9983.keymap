@@ -183,6 +183,17 @@
         };
     };
 
+   combos {
+        compatible = "zmk,combos";
+        combo_shiftapp {
+            timeout-ms = <50>;
+            //slow-release;
+            require-prior-idle-ms = <125>;
+            key-positions = <1>;
+            bindings = <&kp LA(TAB)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -198,7 +209,7 @@
 //        |         aA     |         0           |           SPACE              |         SYM         |        aA          |       
 // -----------------------------------------------------------------------------------------------------------------------------------------------
 
-        &mkp LCLK                                                                                                 &btswitch
+        &mkp LCLK                                                                                                 &none
         &msc SCRL_UP                   &msc SCRL_DOWN             &mkp LCLK              &rcm LA(LEFT) RCLK                            &shiftapp
     &kp LC(Q)          &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(HOME)           &kp LC(END)          &bhm C_MUTE C_VOL_DN      &kp C_VOL_UP       &tdclosewindow
     &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &tdgohome      &msc SCRL_UP           &msc SCRL_UP         &msc SCRL_DOWN            &msc SCRL_DOWN     &bhm DEL BSPC
