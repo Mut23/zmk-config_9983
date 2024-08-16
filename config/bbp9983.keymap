@@ -75,13 +75,6 @@
             #binding-cells = <0>;
             bindings =<&macro_tap &kp SPACE &kp SPACE &kp SPACE &kp SPACE>;
         }; 
-
-        //切换程序
-        shiftapp: zen_em_shiftapp{
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =<&macro_press &kt LALT>, <&macro_tap &kp LALT>,<&macro_tap &kp TAB>, <&macro_release &kp TAB>, <&macro_release &kp LALT>;
-        }; 
   };
 
    //单击PC切换输入法，双击RShift
@@ -186,11 +179,10 @@
    combos {
         compatible = "zmk,combos";
         combo_shiftapp {
-            timeout-ms = <400>;
+            timeout-ms = <800>;
             slow-release;
-            require-prior-idle-ms = <800>;
             key-positions = <6>;
-            bindings = <&kp LA(TAB)>;
+            bindings = <&kp LALT &kp TAB>;
         };
     };
 
