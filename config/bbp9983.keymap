@@ -181,7 +181,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <350>;
-            bindings = <&kp LA(TAB)>, <&kp LALT &kp TAB>;
+            bindings = <&kp LA(TAB)>, <&kp LA(TAB)>;
         };
     };
 
