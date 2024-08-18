@@ -203,8 +203,8 @@
         &mkp LCLK                                                                                                 &btswitch
         &msc SCRL_UP                   &tdshiftapp             &mkp LCLK              &rcm LA(LEFT) RCLK                            &msc SCRL_DOWN
     &kp LC(Q)          &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &bhm LC(HOME) Y        &bhm LC(END) U       &bhm C_VOL_DN AMPS        &bhm C_VOL_UP EQUAL    &tdclosewindow
-    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &tdgohome      &msc SCRL_UP           &msc SCRL_UP         &msc SCRL_DOWN            &msc SCRL_DOWN         &bhm DEL BSPC
-    &pwd               &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &msc SCRL_UP           &msc SCRL_UP         &msc SCRL_DOWN            &msc SCRL_DOWN         &kp ENTER
+    &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LC(G)      &msc SCRL_UP           &msc SCRL_UP         &msc SCRL_DOWN            &msc SCRL_DOWN         &bhm DEL BSPC
+    &tdgohome          &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)      &msc SCRL_UP           &msc SCRL_UP         &msc SCRL_DOWN            &msc SCRL_DOWN         &kp ENTER
                   &kp ESC         &rcm LA(LEFT) RCLK                 &td2                       &kp CLCK             &tdtoupper
             >;
         };
