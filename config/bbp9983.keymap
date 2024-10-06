@@ -150,22 +150,12 @@
     };
 
     behaviors {
-        tdshiftapp: tap_dance_shiftapp {
+        htshiftapp: hold_tap_shiftapp {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <250>;
             bindings = <&mkp>, <&kp>;
-        };
-    };
-
-    behaviors {
-        httoupper: hold_tap_toupper {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <250>;
-            bindings = <&sl>, <&to>;
         };
     };
 
@@ -184,7 +174,7 @@
 //        |         aA     |         0           |           SPACE              |         SYM         |        aA          |       
 // -----------------------------------------------------------------------------------------------------------------------------------------------
 
-        &tdshiftapp LCLK LA(TAB)                                                                                                 &btswitch
+        &htshiftapp LCLK LA(TAB)                                                                                                 &btswitch
         &msc SCRL_UP                   &msc SCRL_DOWN             &mkp LCLK              &rcm LA(LEFT) RCLK                            &tdtoupper
     &kp LC(Q)          &tdclosetab      &kp UP          &tdrefresh        &kp LC(T)      &kp LC(Y)              &none              &kp C_VOL_DN        &kp C_VOL_UP      &tdclosewindow
     &kp LC(A)          &kp LEFT         &kp DOWN        &kp RIGHT         &kp LC(G)      &kp LC(HOME)           &kp LC(END)        &kp AMPS            &kp EQUAL         &bhm DEL BSPC
@@ -196,7 +186,7 @@
         upper_layer {
 
             bindings = <
-                 &tdshiftapp LCLK LA(TAB)                                                                                             &btswitch
+                 &htshiftapp LCLK LA(TAB)                                                                                             &btswitch
         &msc SCRL_UP                   &msc SCRL_DOWN             &mkp LCLK              &rcm LA(LEFT) RCLK                            &to DEFAULT
     &kp Q          &bhm N1 W    &bhm N2 E    &bhm N3 R    &kp T      &kp Y      &kp U       &kp I      &kp O        &kp P
     &kp A          &bhm N4 S    &bhm N5 D    &bhm N6 F    &kp G      &kp H      &kp J       &kp K      &kp L        &kp BSPC
